@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.urls import include, path
 from django.contrib import admin
+from django.contrib.auth import views as auth_views, logout
+from django.conf import settings
 
 urlpatterns = [
 	path('', include('fr_site.urls')),

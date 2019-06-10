@@ -2,3 +2,4 @@ django==2.1.5
 PyMySQL
 requests
 djangorestframework
+social-auth-app-django

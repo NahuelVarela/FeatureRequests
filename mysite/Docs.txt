@@ -1,0 +1,15 @@
+Documents used:
+
+https://simpleisbetterthancomplex.com/tutorial/2016/10/24/how-to-add-social-login-to-django.html
+  
+  - I addded to the "authentication_backends" =  'social_core.backends.google.GoogleOpenId',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.google.GoogleOAuth',
+
+  - I do not use "url", insted, I use path. As such, I made the following changes: path(r'^oauth/',include('social_django.urls', namespace='social')),
+  - I had to change auth_views to: LoginView and LogoutView
+
+  https://medium.com/trabe/oauth-authentication-in-django-with-social-auth-c67a002479c1
+
+  https://fosstack.com/how-to-add-google-authentication-in-django/
+
