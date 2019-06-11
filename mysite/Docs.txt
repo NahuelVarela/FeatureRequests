@@ -12,4 +12,8 @@ https://simpleisbetterthancomplex.com/tutorial/2016/10/24/how-to-add-social-logi
   https://medium.com/trabe/oauth-authentication-in-django-with-social-auth-c67a002479c1
 
   https://fosstack.com/how-to-add-google-authentication-in-django/
+------------------------>><<--------------------------------
 
+So, to log in th user, we will lo them with:
+
+<a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}" role="button">Log in</a> 
