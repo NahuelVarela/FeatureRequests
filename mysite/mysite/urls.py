@@ -22,3 +22,4 @@ urlpatterns = [
 	path('', include('fr_site.urls')),
     path('admin/', admin.site.urls),
 ]
+

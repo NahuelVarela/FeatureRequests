@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block body %}
+
 <!-- Nav tabs -->
 <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
   <li class="nav-item">
@@ -14,18 +15,35 @@
     <a class="nav-link" id="finalized-tab" data-toggle="tab" href="#finalized" role="tab" aria-controls="finalized" aria-selected="false">Finalized</a>
   </li>
 </ul>
-
+{% verbatim %}
+<div id="app">
 <!-- Tab panes -->
-<div class="tab-content">
-  <div class="tab-pane active" id="proposed" role="tabpanel" aria-labelledby="proposed-tab">Hola</div>
-  <div class="tab-pane" id="progress" role="tabpanel" aria-labelledby="progress-tab">...</div>
-  <div class="tab-pane" id="finalized" role="tabpanel" aria-labelledby="messages-tab">...</div>
-</div>
+  <div class="tab-content">
+    <div class="tab-pane active" id="proposed" role="tabpanel" aria-labelledby="proposed-tab">
+      <div class="container">
+        <div class="row mt-5 justify-content-center">
+          <feature-request-comp>
+          </feature-request-comp>
+          <feature-request-comp>
+          </feature-request-comp>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="progress" role="tabpanel" aria-labelledby="progress-tab">
 
+    </div>
+    <div class="tab-pane" id="finalized" role="tabpanel" aria-labelledby="messages-tab">
+
+    </div>
+  </div>
+</div>
+{% endverbatim %}
 <!-- Django Auth -->
 
 <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}" role="button">Log in</a>
 
 <!-- My Scripts -->
+
+<script src="{% static 'js/features.js' %}"></script>
 
 {% endblock %}
