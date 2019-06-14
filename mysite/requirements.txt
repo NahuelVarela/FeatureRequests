@@ -3,3 +3,4 @@ PyMySQL
 requests
 djangorestframework
 social-auth-app-django
+django-crispy-forms
