@@ -10,3 +10,6 @@ class FeaturesItems(models.Model):
 	description = models.TextField()
 	last_modify_date = models.DateField(auto_now=True)
 	created_date = models.DateField(auto_now_add=True)
+
+	def __str__(self):
+		return 'Feature Request: ' + self.title
