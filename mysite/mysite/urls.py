@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views, logout
 from django.conf import settings
 
+from .router import router
+
 urlpatterns = [
 	path('', include('fr_site.urls')),
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
 ]
 
