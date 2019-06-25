@@ -22,8 +22,12 @@
     <div class="tab-pane active" id="proposed" role="tabpanel" aria-labelledby="proposed-tab">
       <div class="container">
         <div class="row mt-5 justify-content-center">
-          <feature-request-comp>
+          <feature-request-comp 
+          v-for="feat in featuresArray"
+          v-bind:title="feat.title"
+          v-bind:description="feat.description">
           </feature-request-comp>
+          
         </div>
       </div>
     </div>
@@ -34,6 +38,7 @@
 
     </div>
   </div>
+  <button v-on:click="getFeatures('')">Actualizar</button>
 </div>
 {% endverbatim %}
 <!-- Django Auth -->
