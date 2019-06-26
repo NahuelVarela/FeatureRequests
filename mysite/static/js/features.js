@@ -23,6 +23,7 @@ var app = new Vue({
     featuresArray: [],
 
   },
+
   methods: {
     getFeatures: function(status){
       console.log('Comienzo la funcion');
@@ -41,5 +42,8 @@ var app = new Vue({
            });
 
     },
-  }
+  },
+  mounted() {
+  this.getFeatures("");
+}
 });
