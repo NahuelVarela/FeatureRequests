@@ -1,0 +1,17 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block body %}
+
+{% verbatim %}
+
+<div id="feature_list_item">
+	<h4> {{ featuresArray.title }}</h4>
+</div>
+
+{% endverbatim %}
+
+<script src="{% static 'js/feature_item.js' %}"></script>
+
+
+{% endblock %}

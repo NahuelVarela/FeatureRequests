@@ -39,3 +39,9 @@ def feature_request_form(request):
         form = FeaturesForm()
 
     return render(request, 'fr_form.html', {'form': form})
+
+
+def feature_list_item(request, feature_request_id):
+    #if request.method == 'GET':
+
+    return render(request, 'feature_list_item.html')

@@ -22,12 +22,13 @@
     <div class="tab-pane active" id="proposed" role="tabpanel" aria-labelledby="proposed-tab">
       <div class="container">
         <div class="row mt-5 justify-content-center">
-          <feature-request-comp 
+          <feature-request-comp
           v-for="feat in featuresArray"
           v-bind:title="feat.title"
+          v-bind:id="feat.id"
           v-bind:description="feat.description">
           </feature-request-comp>
-          
+          {{message}}
         </div>
       </div>
     </div>
