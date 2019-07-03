@@ -9,7 +9,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <script src="{% static 'css/style.css' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 
         <!-- Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
@@ -20,17 +24,19 @@
   </head>
   <body>
     
-    <div class="container">
+    <div class="header-style">
       <div class="row">
-        <div class="col-md-5 offset-md-4">
-          <h1>Platform FRs</h1>
-        </div>
-        <div class="col-md-3">
-          <div class="float-right">
-            <a href="feature_request_form" class="btn btn-info" role="button">Create FR</a>
-          </div>
-        </div>
+        <h1>Platform Requests</h1>
       </div>
+      <div class="row">
+        <div class="col-lg-2 offset-md-10">
+          <a href="feature_request_form" class="btn btn-primary" role="button">New Request</a>
+        </div>
+        {% if not user.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}" role="button">Log in</a>
+        {% endif %}
+      </div>
+
     </div>
 
     <!-- All feature templates will be render inside here -->

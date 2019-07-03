@@ -9,10 +9,10 @@
     <a class="nav-link active" id="proposed-tab" data-toggle="tab" href="#proposed" role="tab" aria-controls="proposed" aria-selected="true">Proposed</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="progress-tab" data-toggle="tab" href="#progress" role="tab" aria-controls="progress" aria-selected="false">On progress</a>
+    <a class="nav-link" id="progress-tab" data-toggle="tab" href="#progress" role="tab" aria-controls="progress" aria-selected="false">In progress</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="finalized-tab" data-toggle="tab" href="#finalized" role="tab" aria-controls="finalized" aria-selected="false">Finalized</a>
+    <a class="nav-link" id="finalized-tab" data-toggle="tab" href="#finalized" role="tab" aria-controls="finalized" aria-selected="false">Done</a>
   </li>
 </ul>
 {% verbatim %}
@@ -20,7 +20,7 @@
 <!-- Tab panes -->
   <div class="tab-content">
     <div class="tab-pane active" id="proposed" role="tabpanel" aria-labelledby="proposed-tab">
-      <div class="container">
+      <!-- <div class="container"> -->
         <div class="row mt-5 justify-content-center">
           <feature-request-comp
           v-for="feat in featuresArray"
@@ -28,12 +28,10 @@
           v-bind:id="feat.id"
           v-bind:description="feat.description">
           </feature-request-comp>
-          {{message}}
         </div>
-      </div>
+      <!-- </div> -->
     </div>
     <div class="tab-pane" id="progress" role="tabpanel" aria-labelledby="progress-tab">
-
     </div>
     <div class="tab-pane" id="finalized" role="tabpanel" aria-labelledby="messages-tab">
 
@@ -41,9 +39,6 @@
   </div>
 </div>
 {% endverbatim %}
-<!-- Django Auth -->
-
-<a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}" role="button">Log in</a>
 
 <!-- My Scripts -->
 
