@@ -1,0 +1,72 @@
+.fr-big-card {
+	background: #BDE3EC;
+	border-radius: 1.25rem;
+	color: #000;
+  	filter: drop-shadow(5px 5px 5px black);
+  	flex-shrink: 0;
+	font-family:'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	font-size: 1.5rem;
+	padding: 2.5rem;
+	position: relative;
+	margin: 50px;
+	transition transform: .25s ease-out;
+
+	
+}
+
+.fr-big-card h1 {
+	font-weight: bolder;
+}
+
+.fr-big-card h3 {
+	color: #fff;
+	line-height: 1.75;
+}
+
+
+.card {
+	margin: 10px;
+}
+
+.card:hover {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  background-color: #BDE3EC;
+  animation-name: zoom;
+  animation-duration: 0.3s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-outs;
+  animation-fill-mode: forwards;
+  z-index: 1;
+
+  
+}
+
+
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+  33% {
+  	transform: scale(1.1, 1.1) rotate(10deg);
+  }
+  66% {
+  	transform: scale(1.2, 1.2) rotate(-10deg);
+  }
+  to {
+    transform: scale(1.1, 1.1) rotate(0deg);
+  }
+}
+
+.header-style {
+	background-image: linear-gradient(#BDE3EC, white);
+	padding: 35px;
+}
+
+.header-style h1 {
+	font-size: 4rem;
+	font-family: 'Lobster', sans-serif;
+	text-align: center;
+	color: #007BFF;
+
+}

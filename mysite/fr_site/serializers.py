@@ -7,4 +7,4 @@ from .models import FeaturesItems
 class FeaturesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = FeaturesItems
-        fields = ('owner', 'handler', 'status', 'title', 'description', 'last_modify_date', 'created_date')
+        fields = ('id', 'owner', 'handler', 'status', 'title', 'description', 'last_modify_date', 'created_date')

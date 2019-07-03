@@ -1,0 +1,26 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block body %}
+
+{% verbatim %}
+
+<div class="fr-big-card container" id="feature_list_item">
+	<div class="row">
+		<div class="col-lg-9">
+			<h1> {{ featuresArray.title }}</h1>
+		</div>
+		<div class="col-lg-3">
+			<h3> {{ featuresArray.status }}</h3>
+		</div>
+	</div>
+</div>
+
+
+
+{% endverbatim %}
+
+<script src="{% static 'js/feature_item.js' %}"></script>
+
+
+{% endblock %}

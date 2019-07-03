@@ -5,13 +5,13 @@ Vue.component('feature-request-comp', {
       xxxx: "",
     }    
   },
-  props:["title","description"],
+  props:["id","title","description"],
 
   template: `<div class="card" style="width: 18rem;">
   				<div class="card-body">
-   					<h5 class="card-title">{{title}}</h5>
+   					<h5 class="card-title" >{{title}}</h5>
     				<p class="card-text">{{description}}</p>
-   					<a href="#" class="btn btn-primary">I like it!</a>
+   					<a :href='/feature/ +  id' class="btn btn-primary">I like it!</a>
  				 </div>
 			</div>`
 })
@@ -44,6 +44,7 @@ var app = new Vue({
     },
   },
   mounted() {
-  this.getFeatures("");
-}
+    this.getFeatures("");
+    console.log(window.location.href);
+  }
 });
