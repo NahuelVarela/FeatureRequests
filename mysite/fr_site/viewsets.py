@@ -11,9 +11,10 @@ class FeaturesViewSet(viewsets.ModelViewSet):
 		fr_id = self.request.query_params.get('id')
 		
 		if fr_id:
-				queryset = FeaturesItems.objects.filter(id = fr_id)
+			queryset = FeaturesItems.objects.filter(id = fr_id)
 		#if status:
 		#		queryset = FeaturesItems.objects.filter(status = status)
 		else:
 			queryset = FeaturesItems.objects.all()
+		print(queryset)	
 		return queryset

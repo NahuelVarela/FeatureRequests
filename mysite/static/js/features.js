@@ -11,7 +11,7 @@ Vue.component('feature-request-comp', {
   				<div class="card-body">
    					<h5 class="card-title" >{{title}}</h5>
     				<p class="card-text">{{description}}</p>
-   					<a :href='/feature/ +  id' class="btn btn-primary">I like it!</a>
+   					<a :href="'/feature/?id=' + id" class="btn btn-primary">I like it!</a>
  				 </div>
 			</div>`
 })

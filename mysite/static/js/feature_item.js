@@ -10,11 +10,11 @@ var app = new Vue({
     getFeature: function(id){
       console.log('Comienzo la funcion');
       this.loading = true;
-      path = "/api/featuresitems/1".concat(id);
+      path = "/api/featuresitems/?id=".concat(id);
       console.log(path);
       this.$http.get(path)
         .then((response) => {
-            this.featuresArray = response.data;
+            this.featuresArray = response.data[0];
             this.loading = false;
             console.log(this.featuresArray);
             console.log('Termino la funcion');
@@ -27,7 +27,11 @@ var app = new Vue({
     },
   },
   mounted() {
-    this.getFeature("");
+    var url_str = window.location.href;
+    var url = new URL(url_str);
+    var id = url.searchParams.get("id");
+    console.log("ID is " + id);
+    this.getFeature(id);
     console.log(window.location.href);
   }
 });
