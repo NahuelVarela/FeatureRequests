@@ -17,3 +17,8 @@ https://simpleisbetterthancomplex.com/tutorial/2016/10/24/how-to-add-social-logi
 So, to log in th user, we will lo them with:
 
 <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}" role="button">Log in</a> 
+
+
+Vuetify:
+
+https://vuetifyjs.com/en/getting-started/quick-start
